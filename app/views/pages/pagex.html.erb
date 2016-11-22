@@ -1,2 +1,12 @@
-<h1>Nikol/h1>
-<p>Find me in app/views/pages/pagex.html.erb</p>
+<h1>Nikol</h1>
+<% flash[:alert] %>
+<%=form_for(@user, url: pages_pagey_path, method: "post") do |f| %>
+<p> Nombre </p>
+<%= f.text_field :name %>
+<p> Edad </p>
+<%= f.text_field :age %>
+<p> Correo electronico </p>
+<%= f.text_field :email %>
+<%= submit_tag("Enviar") %>
+<% end %>
+<%= params %>
